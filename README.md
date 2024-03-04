@@ -6,7 +6,9 @@ reinforcement learning. There are many datasets in D4RL. Here we focus on the Mu
 [hopper](https://www.gymlibrary.dev/environments/mujoco/hopper/), in which you are required to use the offline dataset 
 [hopper-medium-v2](https://github.com/Farama-Foundation/d4rl/wiki/Tasks) (1M samples from a policy trained to 
 approximately 1/3 the performance of the expert) to train the agent to control the one-leg entity to hop forward:
+
 ![](hopper.gif)
+
 Compared to online reinforcement learning tasks, offline reinforcement learning tasks present a greater challenge due
 to the agent's reliance solely on available data, precluding its interaction with the environment to obtain performance 
 evaluations and modify its actions. While online reinforcement learning algorithms can be employed to train
