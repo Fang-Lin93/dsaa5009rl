@@ -14,7 +14,7 @@ class Agent(object):
         """
         raise NotImplementedError
 
-    def sample_actions(self, observations: np.ndarray) -> np.ndarray:
+    def sample_actions(self, *args, **kwargs) -> np.ndarray:
         """
         How to take the actions
         """

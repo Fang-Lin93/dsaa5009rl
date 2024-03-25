@@ -7,7 +7,7 @@ from collections import deque
 from tensorboardX import SummaryWriter
 from dataset import make_env_and_dataset
 from tqdm import trange
-from rlagents import TorchBCLearner, JAXBCLearner
+from agents import TorchBCLearner, JAXBCLearner
 from eval import eval_agent, STATISTICS
 from utils import prepare_output_dir, set_torch_seed
 import argparse

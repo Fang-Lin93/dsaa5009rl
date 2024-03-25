@@ -1,6 +1,6 @@
 
 import gym
-from rlagents.agent import Agent, Batch, InfoDict
+from agents.agent import Agent, Batch, InfoDict
 
 
 class RandomAgent(Agent):

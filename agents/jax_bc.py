@@ -8,7 +8,7 @@ import functools
 from flax import struct
 import flax.linen as nn
 from abc import ABC
-from rlagents.agent import Agent, InfoDict
+from agents.agent import Agent, InfoDict
 from dataset import Batch
 
 

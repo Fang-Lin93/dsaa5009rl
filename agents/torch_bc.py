@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from typing import Sequence, Optional
 
 from dataset import Batch
-from rlagents.agent import Agent, InfoDict
+from agents.agent import Agent, InfoDict
 
 
 class TorchBCLearner(Agent):

@@ -31,7 +31,7 @@ pip install -e .
 ```
 
 
-You can refer to [tutorial.ipynb](tutorial.ipynb) for a detailed illustration and code demo.
+You can refer to [tutorial.ipynb](offline_tutorial.ipynb) for a detailed illustration and code demo.
 
 Have fun!
 
