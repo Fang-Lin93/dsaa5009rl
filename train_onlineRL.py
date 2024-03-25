@@ -18,8 +18,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 parser = argparse.ArgumentParser(description='Reinforcement Learning (SuperTicTacToe)')
 parser.add_argument('--seed', default=0, type=int, help='seed')
 parser.add_argument('--agent', default='jax_dqn', type=str, help='The agent')
-parser.add_argument('--discount', default=0.9, type=float, help='The discount rate')
-parser.add_argument('--max_steps', default=5_000_000, type=int, help='maximal number of episodes')
+parser.add_argument('--discount', default=0.95, type=float, help='The discount rate')
+parser.add_argument('--max_steps', default=1_000_000, type=int, help='maximal number of episodes')
 parser.add_argument('--buffer_size', default=1_000_000, type=int, help='capacity of the replay buffer')
 parser.add_argument('--update_interval', default=100, type=int,
                     help="train the agent every 'eval_interval' action steps")

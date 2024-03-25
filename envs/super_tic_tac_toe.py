@@ -39,7 +39,7 @@ class SuperTicTacToeEnv(object):
     def step(self, action):
         row, col = int(action // 6), int(action % 6)
         occupied = self.board.sum(axis=-1).reshape(-1)
-        assert occupied[action] == 0, f"The position ({row}, {col}) is occupied !, {self.render(show_act_idx=True)}"
+        assert occupied[action] == 0, f"The position ({row}, {col}) is occupied !"
 
         if np.random.random() > self.random_place_prob:
             self.board[row, col, self.player_id] += 1  # selection accepted
@@ -59,8 +59,8 @@ class SuperTicTacToeEnv(object):
         if self.check_winner():
             self.winner = self.player_id
             self.is_game_over = True
-            rewards[self.winner] = 10
-            rewards[1 - self.winner] = 0
+            rewards[self.winner] = 1
+            rewards[1 - self.winner] = -1
             # method1: winner -> 1, loser -> -1, tie -> 0
             # method2: winner -> 10, loser -> 0, tie -> 0
             ...
@@ -137,7 +137,7 @@ class SuperTicTacToeEnv(object):
         while not done:
             if player_id == 0:  # human player
                 action = int(input('Please enter your action index:'))
-                while la[action] == 0:
+                while not 0 <= action <= 35 or la[action] == 0:
                     action = int(input(f'Please enter your action index: (position {action} is occupied!)'))
             else:
                 action = agent.sample_actions(observations=board[:, :, [player_id, 1 - player_id]],

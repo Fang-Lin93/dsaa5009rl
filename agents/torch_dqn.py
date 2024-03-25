@@ -149,8 +149,8 @@ class DQNLearner(Agent):
         self.critic.eval()
         self._n_training_steps += 1
         return {
-                'critic_loss': tq_loss,
-                'qs': qs.mean(),
+                'critic_loss': tq_loss.detach().item(),
+                'qs': qs.mean().detach().item(),
             }
 
     def sample_actions(self,
